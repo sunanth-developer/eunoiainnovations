@@ -1,47 +1,63 @@
 .footer {
-  border-top: 1px solid var(--line);
-  padding: 88px 0 32px;
-  background: var(--black);
+  background: var(--marine);
+  color: #e8efed;
+  padding: 88px 0 28px;
 }
 
-.wordmark {
-  font-family: var(--font-display);
-  font-size: clamp(2.6rem, 9vw, 6rem);
-  font-weight: 500;
-  letter-spacing: -0.055em;
-  line-height: 0.88;
+.top {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(4, minmax(0, 0.7fr));
+  gap: 40px;
+}
+
+.plate {
+  display: inline-flex;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+}
+
+.plate img {
+  height: 48px;
+  width: auto;
 }
 
 .tag {
-  margin: 16px 0 56px;
+  margin: 20px 0 12px;
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--aqua);
 }
 
-.inner {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr auto;
-  gap: 48px;
-  align-items: start;
+.copy {
+  max-width: 28rem;
+  color: #9bb0ae;
+  font-size: 0.95rem;
 }
 
-.inner nav,
-.social {
+.top nav,
+.contact {
   display: grid;
+  align-content: start;
   gap: 10px;
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #8ea3a1;
 }
 
-.inner a:hover,
-.social a:hover {
-  color: var(--accent);
+.top nav p,
+.contact p {
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.top a:hover,
+.contact a:hover {
+  color: var(--aqua);
 }
 
 .base {
@@ -49,20 +65,46 @@
   justify-content: space-between;
   gap: 16px;
   margin-top: 64px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #7d9190;
 }
 
-@media (max-width: 800px) {
-  .inner,
+.base div {
+  display: flex;
+  gap: 20px;
+}
+
+.base a:hover {
+  color: var(--aqua);
+}
+
+@media (max-width: 1100px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    padding: 56px 0 24px;
+  }
+
+  .top,
   .base {
     grid-template-columns: 1fr;
     flex-direction: column;
-    gap: 28px;
+  }
+
+  .plate img {
+    height: 40px;
+  }
+
+  .base {
+    margin-top: 40px;
   }
 }

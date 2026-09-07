@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, type ReactNode } from 'react'
 import { SectionLabel } from '../components/SectionLabel'
 import styles from './page.module.css'
 
@@ -14,7 +14,7 @@ export function usePageTitle(title: string) {
 
 type PageHeroProps = {
   kicker: string
-  title: string
+  title: ReactNode
   lede?: string
 }
 

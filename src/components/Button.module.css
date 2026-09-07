@@ -3,11 +3,12 @@
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: 0 22px;
+  padding: 0 20px;
   border: 1px solid transparent;
+  border-radius: var(--radius-pill);
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   transition:
     background 0.35s var(--ease),
@@ -16,36 +17,42 @@
 }
 
 .primary {
-  background: var(--accent);
-  color: var(--on-accent);
+  background: var(--aqua);
+  color: var(--ink);
 }
 
 .primary:hover {
-  background: var(--accent-light);
-  color: var(--white);
+  background: #3fd0db;
 }
 
 .ghost {
   background: transparent;
-  color: var(--white);
+  color: var(--ink);
   border-color: var(--line-strong);
 }
 
 .ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--aqua-deep);
+  color: var(--aqua-deep);
 }
 
 .line {
   padding-inline: 0;
   min-height: 40px;
   background: transparent;
-  color: var(--white);
+  color: var(--ink);
   border: 0;
+  border-radius: 0;
   border-bottom: 1px solid var(--line-strong);
 }
 
 .line:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: var(--aqua-deep);
+  border-bottom-color: var(--aqua);
+}
+
+@media (max-width: 640px) {
+  .btn {
+    min-height: 46px;
+  }
 }

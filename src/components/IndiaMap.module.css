@@ -5,14 +5,20 @@
   align-items: start;
 }
 
+.mapPanel {
+  padding: 24px;
+  background: var(--marine);
+  border-radius: var(--radius-lg);
+}
+
 .map {
   width: 100%;
   height: auto;
 }
 
 .land {
-  fill: #cfe4e2;
-  stroke: rgba(12, 143, 138, 0.55);
+  fill: #16383c;
+  stroke: rgba(80, 221, 232, 0.35);
   stroke-width: 0.35;
 }
 
@@ -132,6 +138,16 @@
   .layout {
     grid-template-columns: 1fr;
     gap: 28px;
+  }
+
+  .mapPanel {
+    padding: 16px;
+  }
+
+  .list button {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
   }
 }
 

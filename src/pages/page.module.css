@@ -1,9 +1,9 @@
 .hero {
-  padding: calc(var(--nav-h) + 48px) 0 88px;
-  border-bottom: 1px solid var(--line);
+  padding: calc(var(--nav-h) + 56px) 0 72px;
   background:
-    radial-gradient(circle at 88% 12%, rgba(0, 199, 190, 0.12), transparent 34%),
-    var(--black);
+    linear-gradient(180deg, #f7f9f8 0%, #ffffff 72%),
+    var(--paper);
+  border-bottom: 1px solid var(--line);
 }
 
 .title {
@@ -46,6 +46,19 @@
 
 @media (max-width: 960px) {
   .hero {
-    padding: calc(var(--nav-h-compact) + 28px) 0 56px;
+    padding: calc(var(--nav-h-compact) + 28px) 0 48px;
+  }
+
+  .title {
+    max-width: none;
+    font-size: clamp(1.7rem, 8vw, 2.4rem);
+  }
+
+  .mid {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .page {
+    padding-bottom: 48px;
   }
 }

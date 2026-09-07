@@ -6,6 +6,7 @@ export const blogCategories = [
   'Autonomy',
   'Deployments',
   'Survey technology',
+  'Sustainability',
   'Company',
 ] as const
 

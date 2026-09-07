@@ -1,19 +1,30 @@
 :root {
   color-scheme: light;
-  --accent: #0c8f8a;
-  --accent-light: #00c7be;
-  --on-accent: #f7fbfb;
-  --deep: #eef5f4;
-  --deep-navy: #e7f1f0;
-  --black: #f5f8f7;
-  --white: #0c191a;
-  --muted: #4f605e;
-  --struct: #7d8c8a;
 
-  --line: rgba(12, 25, 26, 0.1);
-  --line-strong: rgba(12, 25, 26, 0.18);
-  --fog: rgba(245, 248, 247, 0.84);
-  --panel: rgba(255, 255, 255, 0.88);
+  --ink: #202020;
+  --aqua: #50dde8;
+  --aqua-deep: #0e777a;
+  --aqua-soft: #cff7f5;
+  --marine: #071719;
+  --ocean: #0b2427;
+  --paper: #ffffff;
+  --offwhite: #f7f9f8;
+  --grey: #879391;
+  --grey-light: #e8efed;
+
+  --accent: var(--aqua-deep);
+  --accent-light: var(--aqua);
+  --on-accent: #202020;
+  --black: var(--paper);
+  --white: var(--ink);
+  --deep: var(--offwhite);
+  --deep-navy: var(--grey-light);
+  --muted: var(--grey);
+  --struct: #6b7a78;
+  --line: rgba(32, 32, 32, 0.1);
+  --line-strong: rgba(32, 32, 32, 0.18);
+  --fog: rgba(247, 249, 248, 0.88);
+  --panel: rgba(255, 255, 255, 0.86);
 
   --space-8: 8px;
   --space-12: 12px;
@@ -33,22 +44,39 @@
   --text-xs: 0.6875rem;
   --text-sm: 0.875rem;
   --text-md: 1.0625rem;
-  --text-xl: clamp(3.4rem, 8vw, 6.6rem);
-  --text-hero: clamp(3.6rem, 11vw, 9.2rem);
+  --text-xl: clamp(2.2rem, 4.6vw, 3.8rem);
+  --text-hero: clamp(2.15rem, 4.2vw, 3.35rem);
 
-  --nav-h: 104px;
-  --nav-h-compact: 80px;
+  --nav-h: 88px;
+  --nav-h-compact: 72px;
   --gutter: 48px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --max: 1440px;
+  --radius-sm: 12px;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   :root {
     --gutter: 20px;
-    --nav-h: 88px;
-    --nav-h-compact: 76px;
-    --text-hero: clamp(2.8rem, 14vw, 4.6rem);
-    --text-xl: clamp(2.5rem, 11vw, 3.8rem);
+    --nav-h: 72px;
+    --nav-h-compact: 64px;
+    --text-hero: clamp(1.7rem, 8vw, 2.4rem);
+    --text-xl: clamp(1.7rem, 7.2vw, 2.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --gutter: 16px;
+    --nav-h: 64px;
+    --nav-h-compact: 60px;
+    --text-md: 1rem;
+    --text-hero: clamp(1.55rem, 7.4vw, 2rem);
+    --text-xl: clamp(1.55rem, 8vw, 2.1rem);
+    --space-160: 80px;
+    --space-128: 64px;
   }
 }

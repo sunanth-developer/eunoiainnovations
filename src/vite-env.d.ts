@@ -1,0 +1,12 @@
+/// <reference types="vite/client" />
+
+interface ImportMetaEnv {
+  readonly VITE_BROCHURE_URL?: string
+  readonly VITE_CONTACT_ENDPOINT?: string
+  readonly VITE_ADMIN_USER?: string
+  readonly VITE_ADMIN_PASSWORD?: string
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv
+}

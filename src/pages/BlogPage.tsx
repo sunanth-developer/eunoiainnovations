@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
-import { bodyToParagraphs, formatPostDate, type BlogPost } from '../data/blog'
+import { blogCategories, bodyToParagraphs, formatPostDate, type BlogPost } from '../data/blog'
+import { pageSeo } from '../data/site'
 import { isAdminAuthed } from '../lib/adminAuth'
 import { loadPostBySlug, loadPublishedPosts, subscribeBlog } from '../lib/blogStore'
 import { handleAppLink, withBase } from '../lib/router'
 import { LinkButton } from '../components/Button'
+import { Seo, breadcrumbSchema } from '../components/Seo'
 import { SectionLabel } from '../components/SectionLabel'
-import { usePageTitle } from './pageHero'
 import styles from './BlogPage.module.css'
+import site from './site.module.css'
 
 function usePublishedPosts() {
   const [posts, setPosts] = useState<BlogPost[]>([])
@@ -30,28 +32,50 @@ function usePublishedPosts() {
 }
 
 export function BlogPage() {
-  usePageTitle('Blog | Eunoia Innovations')
   const posts = usePublishedPosts()
+  const [category, setCategory] = useState('All')
+  const visible = category === 'All' ? posts : posts.filter((post) => post.category === category)
 
   return (
     <div className={styles.page}>
+      <Seo
+        title={pageSeo.insights.title}
+        description={pageSeo.insights.description}
+        path="/insights"
+        jsonLd={breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Insights', path: '/insights' },
+        ])}
+      />
       <header className={`wrap ${styles.hero}`}>
-        <SectionLabel>Blog</SectionLabel>
+        <SectionLabel>Field notes</SectionLabel>
         <h1 className={`display ${styles.title}`}>Notes from the water.</h1>
         <p className="lede">
-          Field notes and writing from Eunoia — marine robotics, water management,
-          autonomy, deployments and survey technology.
+          Field notes on marine robotics, water management, autonomy, deployments,
+          survey technology and sustainability.
         </p>
+        <div className={site.chips}>
+          {['All', ...blogCategories].map((item) => (
+            <button
+              key={item}
+              type="button"
+              className={category === item ? site.chipOn : ''}
+              onClick={() => setCategory(item)}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
       </header>
 
-      {posts.length ? (
+      {visible.length ? (
         <div className={`wrap ${styles.grid}`}>
-          {posts.map((post) => (
+          {visible.map((post) => (
             <a
               key={post.id}
               className={styles.card}
-              href={withBase(`/blog/${post.slug}`)}
-              onClick={(event) => handleAppLink(event, `/blog/${post.slug}`)}
+              href={withBase(`/insights/${post.slug}`)}
+              onClick={(event) => handleAppLink(event, `/insights/${post.slug}`)}
             >
               {post.image ? (
                 <img src={post.image} alt={post.imageAlt || post.title} className={styles.cardImg} />
@@ -67,7 +91,9 @@ export function BlogPage() {
           ))}
         </div>
       ) : (
-        <p className={`wrap ${styles.empty}`}>No published posts yet.</p>
+        <p className={`wrap ${styles.empty}`}>
+          {posts.length ? 'No notes in this category yet.' : 'No published notes yet.'}
+        </p>
       )}
 
       <div className={`wrap ${styles.cta}`}>
@@ -106,7 +132,7 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
     }
   }, [slug])
 
-  usePageTitle(post?.title ? `${post.title} | Eunoia Innovations` : 'Blog | Eunoia Innovations')
+  const title = post?.title ? `${post.title} | Eunoia Innovations` : pageSeo.insights.title
 
   if (post === undefined) {
     return (
@@ -120,13 +146,13 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
     return (
       <div className={styles.page}>
         <header className={`wrap ${styles.hero}`}>
-          <SectionLabel>Blog</SectionLabel>
+          <SectionLabel>Field notes</SectionLabel>
           <h1 className={`display ${styles.title}`}>Post not found.</h1>
           <p className="lede">That article is unpublished or does not exist.</p>
         </header>
         <div className={`wrap ${styles.cta}`}>
-          <LinkButton href="/blog" onClick={(event) => handleAppLink(event, '/blog')}>
-            Back to blog
+          <LinkButton href="/insights">
+            Back to field notes
           </LinkButton>
         </div>
       </div>
@@ -135,6 +161,19 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
 
   return (
     <article className={styles.page}>
+      <Seo
+        title={title}
+        description={post.excerpt}
+        path={`/insights/${post.slug}`}
+        type="article"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: post.title,
+          datePublished: post.date,
+          description: post.excerpt,
+        }}
+      />
       <header className={`wrap ${styles.hero}`}>
         <p className={styles.meta}>
           {post.category}
@@ -152,8 +191,8 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
         ))}
       </div>
       <div className={`wrap ${styles.cta}`}>
-        <LinkButton href="/blog" variant="ghost" onClick={(event) => handleAppLink(event, '/blog')}>
-          All posts
+        <LinkButton href="/insights" variant="ghost">
+          All notes
         </LinkButton>
         {isAdminAuthed() ? (
           <LinkButton
