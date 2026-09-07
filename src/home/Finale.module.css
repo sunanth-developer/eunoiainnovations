@@ -33,7 +33,7 @@
   height: auto;
   object-fit: contain;
   background: transparent;
-  filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 28px 48px rgba(12, 25, 26, 0.16));
 }
 
 .veil {

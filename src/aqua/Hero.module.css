@@ -128,7 +128,7 @@
   object-fit: contain;
   object-position: center;
   background: transparent;
-  filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 28px 48px rgba(12, 25, 26, 0.16));
 }
 
 .pulse {

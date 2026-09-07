@@ -19,11 +19,11 @@
   height: 100%;
   object-fit: cover;
   object-position: center 40%;
-  opacity: 0.38;
+  opacity: 0.5;
 }
 
 .fog {
-  background: linear-gradient(180deg, rgba(3, 7, 8, 0.2), rgba(3, 7, 8, 0.92));
+  background: linear-gradient(180deg, rgba(245, 248, 247, 0.18), rgba(245, 248, 247, 0.92));
 }
 
 .inner {

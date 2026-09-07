@@ -67,7 +67,7 @@
 
 .contain img {
   object-fit: contain;
-  filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0 24px 40px rgba(12, 25, 26, 0.16));
 }
 
 .cover img {

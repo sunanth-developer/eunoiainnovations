@@ -18,14 +18,14 @@
   height: 100%;
   object-fit: cover;
   object-position: center 40%;
-  filter: saturate(0.85) brightness(0.72);
+  filter: saturate(0.9) brightness(1.02);
 }
 
 .veil {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(3, 7, 8, 0.2) 0%, rgba(3, 7, 8, 0.82) 72%),
+    linear-gradient(180deg, rgba(245, 248, 247, 0.35) 0%, rgba(245, 248, 247, 0.92) 78%),
     radial-gradient(ellipse at 70% 40%, rgba(0, 199, 190, 0.12), transparent 50%);
 }
 

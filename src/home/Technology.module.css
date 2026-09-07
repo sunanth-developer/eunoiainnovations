@@ -26,12 +26,12 @@
 }
 
 .bgOn {
-  opacity: 0.42;
+  opacity: 0.28;
   transform: scale(1);
 }
 
 .fog {
-  background: linear-gradient(180deg, rgba(3, 7, 8, 0.35), rgba(3, 7, 8, 0.92) 72%, #030708);
+  background: linear-gradient(180deg, rgba(245, 248, 247, 0.28), rgba(245, 248, 247, 0.92) 72%, var(--black));
 }
 
 .inner {
@@ -60,7 +60,7 @@
   min-height: 180px;
   padding: 24px;
   text-align: left;
-  background: rgba(3, 7, 8, 0.72);
+  background: var(--panel);
   color: var(--muted);
 }
 

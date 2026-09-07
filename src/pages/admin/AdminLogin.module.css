@@ -14,7 +14,7 @@
   gap: 18px;
   padding: 36px 32px 32px;
   border: 1px solid var(--line);
-  background: rgba(3, 7, 8, 0.72);
+  background: var(--panel);
 }
 
 .title {
@@ -63,7 +63,7 @@
 }
 
 .error {
-  color: #f3a3a3;
+  color: #b42318;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.08em;

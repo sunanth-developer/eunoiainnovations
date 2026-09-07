@@ -1,6 +1,6 @@
 .section {
   padding: 80px 0 120px;
-  background: #041112;
+  background: var(--deep);
 }
 
 .head {

@@ -28,10 +28,10 @@
 .compact .shell,
 .open .shell {
   height: 58px;
-  background: rgba(3, 7, 8, 0.78);
+  background: var(--panel);
   border-color: var(--line);
   backdrop-filter: blur(20px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 18px 40px rgba(12, 25, 26, 0.08);
 }
 
 .desktop {
@@ -46,7 +46,7 @@
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(245, 247, 246, 0.62);
+  color: var(--muted);
 }
 
 .link:hover,
@@ -145,7 +145,7 @@
     pointer-events: auto;
     position: fixed;
     inset: 0;
-    background: #030708;
+    background: var(--black);
     padding: 96px 0 48px;
     overflow-y: auto;
     z-index: 40;

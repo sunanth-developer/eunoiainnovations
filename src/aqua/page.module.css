@@ -1,15 +1,4 @@
 .page {
-  --accent: #00c7be;
-  --accent-light: #54e4e0;
-  --deep: #061819;
-  --black: #030708;
-  --white: #f5f7f6;
-  --muted: #a8b3b1;
-  --struct: #526260;
-  --line: rgba(245, 247, 246, 0.12);
-  --line-strong: rgba(245, 247, 246, 0.22);
-  --panel: rgba(3, 7, 8, 0.72);
-  --fog: rgba(6, 24, 25, 0.55);
   background: var(--black);
   color: var(--white);
   overflow-x: clip;

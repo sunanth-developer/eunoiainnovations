@@ -50,7 +50,7 @@
   bottom: 16px;
   padding: 6px 10px;
   border: 1px solid rgba(0, 199, 190, 0.45);
-  background: rgba(3, 7, 8, 0.62);
+  background: var(--panel);
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.14em;

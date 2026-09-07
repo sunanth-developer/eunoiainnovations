@@ -17,11 +17,12 @@
 
 .primary {
   background: var(--accent);
-  color: var(--black);
+  color: var(--on-accent);
 }
 
 .primary:hover {
   background: var(--accent-light);
+  color: var(--white);
 }
 
 .ghost {
@@ -32,7 +33,7 @@
 
 .ghost:hover {
   border-color: var(--accent);
-  color: var(--accent-light);
+  color: var(--accent);
 }
 
 .line {
@@ -41,7 +42,7 @@
   background: transparent;
   color: var(--white);
   border: 0;
-  border-bottom: 1px solid rgba(245, 247, 246, 0.28);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .line:hover {

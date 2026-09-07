@@ -17,7 +17,7 @@ export function Mission() {
       gsap.from(`.${styles.word}`, {
         y: 40,
         opacity: 0.15,
-        color: '#526260',
+        color: '#7d8c8a',
         stagger: 0.18,
         duration: 0.8,
         ease: 'power3.out',

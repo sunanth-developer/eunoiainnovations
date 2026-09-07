@@ -1,6 +1,6 @@
 .section {
   padding: 120px 0;
-  background: #041112;
+  background: var(--deep);
 }
 
 .grid {
@@ -20,7 +20,7 @@
   gap: 0;
   padding: 28px 28px 8px;
   border: 1px solid var(--line);
-  background: rgba(3, 7, 8, 0.72);
+  background: var(--panel);
   font-family: var(--font-mono);
 }
 
