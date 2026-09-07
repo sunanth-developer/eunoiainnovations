@@ -1,0 +1,44 @@
+.page {
+  padding: calc(var(--nav-h) + 48px) 0 120px;
+  background: var(--deep);
+}
+
+.hero {
+  display: grid;
+  gap: 22px;
+  padding-bottom: 72px;
+  border-bottom: 1px solid var(--line);
+}
+
+.title {
+  font-size: var(--text-xl);
+}
+
+.list {
+  display: grid;
+  gap: 96px;
+  padding-top: 80px;
+}
+
+.article {
+  display: grid;
+  gap: 18px;
+  max-width: 46rem;
+}
+
+.headline {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.excerpt {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.article p:not(.excerpt):not(.label) {
+  color: var(--muted);
+}
+
+.cta {
+  padding-top: 80px;
+}

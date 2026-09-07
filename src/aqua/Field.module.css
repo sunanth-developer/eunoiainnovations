@@ -1,0 +1,138 @@
+.section {
+  padding: 80px 0 140px;
+  background: var(--black);
+}
+
+.head {
+  margin-bottom: 56px;
+}
+
+.title {
+  margin-top: 18px;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.map {
+  width: 100%;
+  height: auto;
+}
+
+.land {
+  fill: rgba(6, 24, 25, 0.9);
+  stroke: rgba(0, 199, 190, 0.32);
+  stroke-width: 0.4;
+}
+
+.glow {
+  fill: rgba(0, 199, 190, 0.12);
+}
+
+.glowOn {
+  fill: rgba(0, 199, 190, 0.3);
+}
+
+.dot {
+  fill: var(--accent);
+  cursor: pointer;
+}
+
+.pulse {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 0.4;
+  opacity: 0.7;
+  animation: ring 2.8s ease-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.disclaimer {
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--struct);
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.place {
+  margin: 16px 0;
+  font-size: clamp(2rem, 3.4vw, 3.2rem);
+}
+
+.place span {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.05rem;
+  color: var(--muted);
+  letter-spacing: 0;
+}
+
+.note {
+  color: var(--muted);
+  max-width: 32rem;
+}
+
+.list {
+  margin-top: 32px;
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.list button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  color: var(--muted);
+}
+
+.list em {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.active {
+  color: var(--white);
+}
+
+@keyframes ring {
+  70% {
+    opacity: 0;
+    transform: scale(2.4);
+  }
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
+  }
+}

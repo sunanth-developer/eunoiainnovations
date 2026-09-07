@@ -1,0 +1,125 @@
+.section {
+  padding: 140px 0;
+  background: var(--black);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.title {
+  margin: 18px 0 22px;
+  font-size: clamp(2.4rem, 5.4vw, 4.4rem);
+  line-height: 0.96;
+}
+
+.copy {
+  display: grid;
+  gap: 14px;
+  max-width: 34rem;
+  color: var(--muted);
+}
+
+.console {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(rgba(245, 247, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 247, 246, 0.03) 1px, transparent 1px),
+    #071a1c;
+  background-size: 32px 32px, 32px 32px, auto;
+}
+
+.radar {
+  position: absolute;
+  right: -36px;
+  top: -36px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 199, 190, 0.28);
+}
+
+.rings,
+.rings span {
+  position: absolute;
+  inset: 18%;
+  border: 1px solid rgba(0, 199, 190, 0.16);
+  border-radius: 50%;
+}
+
+.rings span:nth-child(2) {
+  inset: 32%;
+}
+
+.rings span:nth-child(3) {
+  inset: 46%;
+}
+
+.sweep {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0 78%, rgba(0, 199, 190, 0.38) 100%);
+  animation: sweep 9s linear infinite;
+}
+
+.rows {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0;
+  margin-top: 88px;
+}
+
+.rows li {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.rows strong {
+  color: var(--accent-light);
+  font-weight: 500;
+}
+
+.note {
+  margin-top: 24px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--struct);
+}
+
+@keyframes sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sweep {
+    animation: none;
+  }
+}

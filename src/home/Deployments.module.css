@@ -1,0 +1,26 @@
+.section {
+  padding: 100px 0 80px;
+  background: var(--black);
+}
+
+.head {
+  margin-bottom: 48px;
+}
+
+.title {
+  margin: 18px 0 20px;
+  font-size: var(--text-xl);
+}
+
+.shot {
+  display: grid;
+  gap: 24px;
+  justify-items: start;
+  margin-top: 56px;
+}
+
+.img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}

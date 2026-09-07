@@ -1,0 +1,117 @@
+.section {
+  background: var(--deep-navy);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.title {
+  margin: 22px 0 28px;
+  font-size: var(--text-xl);
+}
+
+.copy {
+  display: grid;
+  gap: 18px;
+  color: var(--muted);
+}
+
+.emphasis {
+  color: var(--white);
+}
+
+.extra,
+.roadmapWrap,
+.close {
+  margin-top: 96px;
+}
+
+.extra {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  color: var(--muted);
+}
+
+.extra > div {
+  display: grid;
+  align-content: start;
+}
+
+.extra p + p {
+  margin-top: 16px;
+}
+
+.mid {
+  margin: 18px 0 16px;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--white);
+}
+
+.roadmap {
+  display: grid;
+  margin-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.roadmap li {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.roadmap span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.roadmap strong {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.close {
+  display: grid;
+  gap: 22px;
+  max-width: 40rem;
+  color: var(--muted);
+}
+
+.image {
+  height: min(560px, 70vh);
+}
+
+.caption {
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .grid,
+  .extra {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .image {
+    height: 360px;
+  }
+
+  .roadmap li {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

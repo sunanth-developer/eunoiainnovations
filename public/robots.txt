@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eunoiainnovations.com/sitemap.xml

@@ -1,0 +1,147 @@
+.section {
+  position: relative;
+  background: var(--black);
+}
+
+.stage {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  transform-origin: center center;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.veil {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.42);
+}
+
+.copy {
+  position: absolute;
+  top: calc(var(--nav-h-compact) + 28px);
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: var(--text-xl);
+  max-width: 12ch;
+}
+
+.vessel {
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  width: min(520px, 72vw);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.vesselInner {
+  width: 100%;
+}
+
+.silhouette {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 18px 28px rgba(2, 6, 23, 0.45));
+}
+
+.web {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.arm {
+  position: absolute;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.arm:nth-child(1) {
+  left: 12%;
+  top: 72%;
+}
+
+.arm:nth-child(2) {
+  left: 32%;
+  top: 30%;
+}
+
+.arm:nth-child(3) {
+  right: 28%;
+  top: 28%;
+}
+
+.arm:nth-child(4) {
+  right: 10%;
+  top: 74%;
+}
+
+.line {
+  width: 72px;
+  height: 1px;
+  background: rgba(85, 214, 190, 0.75);
+  transform-origin: left center;
+}
+
+.mission {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+@media (max-width: 959px) {
+  .stage {
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 0 80px;
+  }
+
+  .copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+
+  .vessel {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin: 64px auto 48px;
+  }
+
+  .web {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: min(var(--max), calc(100% - (var(--gutter) * 2)));
+    margin-inline: auto;
+  }
+
+  .arm {
+    position: relative;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    justify-items: start;
+  }
+}

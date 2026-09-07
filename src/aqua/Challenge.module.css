@@ -1,0 +1,37 @@
+.section {
+  min-height: 88vh;
+  display: grid;
+  align-items: center;
+  padding: 160px 0;
+  background: var(--black);
+}
+
+.kicker {
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 6.4rem);
+  max-width: 12ch;
+  line-height: 0.92;
+}
+
+.copy {
+  display: grid;
+  gap: 16px;
+  max-width: 34rem;
+  margin-top: 40px;
+  color: var(--muted);
+}
+
+.copy strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+@media (max-width: 800px) {
+  .section {
+    min-height: 0;
+    padding: 96px 0;
+  }
+}
