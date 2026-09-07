@@ -1,0 +1,71 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: calc(var(--nav-h) + 24px) 24px 80px;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(0, 199, 190, 0.12), transparent 32%),
+    var(--black);
+}
+
+.card {
+  width: min(440px, 100%);
+  display: grid;
+  gap: 18px;
+  padding: 36px 32px 32px;
+  border: 1px solid var(--line);
+  background: rgba(3, 7, 8, 0.72);
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  max-width: 10ch;
+}
+
+.copy {
+  color: var(--muted);
+}
+
+.demo {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--accent-light);
+}
+
+.demo strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.card label {
+  display: grid;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card input {
+  width: 100%;
+  padding: 14px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--white);
+}
+
+.card input:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+}
+
+.error {
+  color: #f3a3a3;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

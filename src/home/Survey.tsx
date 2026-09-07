@@ -8,7 +8,11 @@ import styles from './Survey.module.css'
 
 const layers = ['Position', 'Survey path', 'Mapping', 'Data'] as const
 
-export function Survey() {
+type SurveyProps = {
+  showCta?: boolean
+}
+
+export function Survey({ showCta = true }: SurveyProps) {
   const rootRef = useRef<HTMLElement>(null)
   const reduced = usePrefersReducedMotion()
 
@@ -39,7 +43,7 @@ export function Survey() {
   return (
     <section ref={rootRef} className={styles.section} id="survey">
       <div className="wrap">
-        <SectionLabel>12 / Hydrographic survey</SectionLabel>
+        <SectionLabel>Hydrographic survey</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           See
           <br />
@@ -65,11 +69,13 @@ export function Survey() {
           ))}
         </ol>
       </div>
-      <div className="wrap" style={{ marginTop: 36 }}>
-        <LinkButton href="/survey" variant="line" onClick={(e) => handleAppLink(e, '/survey')}>
-          Explore survey systems
-        </LinkButton>
-      </div>
+      {showCta ? (
+        <div className="wrap" style={{ marginTop: 36 }}>
+          <LinkButton href="/survey" variant="line" onClick={(e) => handleAppLink(e, '/survey')}>
+            Explore survey systems
+          </LinkButton>
+        </div>
+      ) : null}
     </section>
   )
 }

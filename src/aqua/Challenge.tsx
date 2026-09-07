@@ -5,7 +5,7 @@ export function AquaChallenge() {
   return (
     <section className={styles.section} id="challenge">
       <div className="wrap">
-        <SectionLabel className={styles.kicker}>01 / Frequency</SectionLabel>
+        <SectionLabel className={styles.kicker}>Frequency</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           Cleaning water once
           <br />

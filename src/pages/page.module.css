@@ -36,6 +36,14 @@
   color: var(--muted);
 }
 
+.close {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 48px 0 32px;
+  border-top: 1px solid var(--line);
+}
+
 @media (max-width: 960px) {
   .hero {
     padding: calc(var(--nav-h-compact) + 28px) 0 56px;

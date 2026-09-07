@@ -1,5 +1,5 @@
 .section {
-  padding: 120px 0 40px;
+  padding: calc(var(--nav-h) + 48px) 0 40px;
   background: var(--black);
 }
 

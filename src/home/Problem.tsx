@@ -5,7 +5,7 @@ export function Problem() {
   return (
     <section className={`${styles.band} ${styles.dark}`} id="problem">
       <div className="wrap">
-        <SectionLabel>03 / The problem</SectionLabel>
+        <SectionLabel>The problem</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           The problem
           <br />

@@ -50,7 +50,7 @@ export function Flagship({ showCta = true }: FlagshipProps) {
   return (
     <section ref={rootRef} className={styles.section} id="flagship">
       <div className={`wrap ${styles.head}`}>
-        <SectionLabel>06 / Aqua Skimmer</SectionLabel>
+        <SectionLabel>Aqua Skimmer</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           Aqua
           <br />

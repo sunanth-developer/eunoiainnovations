@@ -28,9 +28,9 @@ export function Mission() {
   }, [reduced])
 
   return (
-    <section ref={rootRef} className={styles.band} id="why">
+    <section ref={rootRef} className={`${styles.band} ${styles.pageOpen}`} id="why">
       <div className="wrap">
-        <SectionLabel>02 / Mission</SectionLabel>
+        <SectionLabel>Mission</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           We build
           <br />

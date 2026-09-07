@@ -8,7 +8,7 @@ export function Notes() {
   return (
     <section className={styles.section} id="notes">
       <div className={`wrap ${styles.head}`}>
-        <SectionLabel>17 / Field notes</SectionLabel>
+        <SectionLabel>Field notes</SectionLabel>
         <h2 className={`display ${styles.title}`}>Field notes</h2>
       </div>
       <div className={`wrap ${styles.grid}`}>
@@ -21,8 +21,8 @@ export function Notes() {
         ))}
       </div>
       <div className="wrap">
-        <LinkButton href="/notes" variant="line" onClick={(e) => handleAppLink(e, '/notes')}>
-          Read field notes
+        <LinkButton href="/blog" variant="line" onClick={(e) => handleAppLink(e, '/blog')}>
+          Read the blog
         </LinkButton>
       </div>
     </section>

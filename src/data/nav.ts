@@ -6,41 +6,43 @@ export type NavItem = {
 }
 
 export const navItems: NavItem[] = [
-  { label: 'Why', href: '/#why', match: ['/'], sections: ['why', 'mission', 'problem'] },
+  { label: 'Why', href: '/why', match: ['/why'] },
   {
     label: 'Technology',
     href: '/technology',
-    match: ['/technology', '/survey'],
-    sections: ['technology'],
+    match: ['/technology'],
   },
   {
     label: 'Platforms',
     href: '/platforms',
-    match: ['/platforms', '/aqua-skimmer'],
-    sections: ['platforms', 'flagship', 'how', 'engineering'],
+    match: ['/platforms', '/aqua-skimmer', '/survey'],
   },
   {
     label: 'Deployments',
     href: '/deployments',
     match: ['/deployments'],
-    sections: ['deployments', 'data'],
   },
   {
     label: 'About',
     href: '/about',
     match: ['/about'],
-    sections: ['autonomy', 'survey', 'future', 'india', 'about', 'team'],
+  },
+  {
+    label: 'Blog',
+    href: '/blog',
+    match: ['/blog', '/notes', '/insights'],
   },
 ]
 
 export const footerLinks: NavItem[] = [
-  { label: 'Why', href: '/#why' },
+  { label: 'Why', href: '/why' },
   { label: 'Technology', href: '/technology' },
   { label: 'Platforms', href: '/platforms' },
   { label: 'Aqua Skimmer', href: '/aqua-skimmer' },
+  { label: 'Survey', href: '/survey' },
   { label: 'Deployments', href: '/deployments' },
   { label: 'About', href: '/about' },
-  { label: 'Field notes', href: '/notes' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ]
 

@@ -6,7 +6,7 @@ export function Team() {
   return (
     <section className={styles.section} id="team">
       <div className={`wrap ${styles.head}`}>
-        <SectionLabel>16 / Team</SectionLabel>
+        <SectionLabel>Team</SectionLabel>
         <h2 className={`display ${styles.title}`}>The people building it.</h2>
       </div>
       <div className={`wrap ${styles.grid}`}>

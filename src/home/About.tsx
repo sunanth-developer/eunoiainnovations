@@ -3,9 +3,9 @@ import styles from './story.module.css'
 
 export function About() {
   return (
-    <section className={`${styles.band} ${styles.dark}`} id="about">
+    <section className={`${styles.band} ${styles.dark} ${styles.pageOpen}`} id="about">
       <div className="wrap">
-        <SectionLabel>15 / About</SectionLabel>
+        <SectionLabel>About</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           Building
           <br />

@@ -31,7 +31,7 @@ export function India() {
   return (
     <section ref={rootRef} className={styles.section} id="india">
       <div className={`wrap ${styles.head}`}>
-        <SectionLabel>14 / Built in India</SectionLabel>
+        <SectionLabel>Built in India</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           Built in India.
           <br />

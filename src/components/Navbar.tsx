@@ -8,10 +8,9 @@ import styles from './Navbar.module.css'
 type NavbarProps = {
   compact: boolean
   path: string
-  section: string
 }
 
-export function Navbar({ compact, path, section }: NavbarProps) {
+export function Navbar({ compact, path }: NavbarProps) {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
@@ -28,11 +27,8 @@ export function Navbar({ compact, path, section }: NavbarProps) {
     setOpen(false)
   }
 
-  const active = (item: (typeof navItems)[number]) => {
-    if (path === '/' && item.sections?.includes(section)) return true
-    if (path === '/' && item.href === '/#why' && section === 'why') return true
-    return Boolean(item.match?.some((match) => match !== '/' && path.startsWith(match)))
-  }
+  const active = (item: (typeof navItems)[number]) =>
+    Boolean(item.match?.some((match) => path === match || path.startsWith(`${match}/`)))
 
   return (
     <header className={`${styles.bar} ${compact ? styles.compact : ''} ${open ? styles.open : ''}`}>

@@ -9,7 +9,7 @@ export function Platforms() {
   return (
     <section className={styles.section} id="platforms">
       <div className={`wrap ${styles.head}`}>
-        <SectionLabel>05 / Platforms</SectionLabel>
+        <SectionLabel>Platforms</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           Our
           <br />

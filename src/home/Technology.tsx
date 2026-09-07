@@ -6,7 +6,11 @@ import { pillars } from '../data/pillars'
 import { handleAppLink } from '../lib/router'
 import styles from './Technology.module.css'
 
-export function Technology() {
+type TechnologyProps = {
+  showCta?: boolean
+}
+
+export function Technology({ showCta = true }: TechnologyProps) {
   const [active, setActive] = useState<(typeof pillars)[number]['id']>('clean')
   const current = pillars.find((item) => item.id === active) ?? pillars[0]
 
@@ -24,7 +28,7 @@ export function Technology() {
         <div className={styles.fog} />
       </div>
       <div className={`wrap ${styles.inner}`}>
-        <SectionLabel>04 / Technology</SectionLabel>
+        <SectionLabel>Technology</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           One technology.
           <br />
@@ -46,9 +50,11 @@ export function Technology() {
           ))}
         </div>
         <p className={styles.copy}>{current.copy}</p>
-        <LinkButton href="/technology" variant="line" onClick={(e) => handleAppLink(e, '/technology')}>
-          Explore the technology
-        </LinkButton>
+        {showCta ? (
+          <LinkButton href="/platforms" variant="line" onClick={(e) => handleAppLink(e, '/platforms')}>
+            See platforms
+          </LinkButton>
+        ) : null}
       </div>
     </section>
   )

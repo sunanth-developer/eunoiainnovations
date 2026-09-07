@@ -36,7 +36,7 @@ export function WaterData() {
     <section ref={rootRef} className={styles.section} id="data">
       <div className={`wrap ${styles.grid}`}>
         <div>
-          <SectionLabel>10 / Water + data</SectionLabel>
+          <SectionLabel>Water + data</SectionLabel>
           <h2 className={`display ${styles.title}`}>
             The water
             <br />

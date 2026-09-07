@@ -3,6 +3,10 @@
   background: var(--black);
 }
 
+.pageOpen {
+  padding-top: calc(var(--nav-h) + 56px);
+}
+
 .dark {
   background: #041112;
 }

@@ -11,7 +11,7 @@ export function Future() {
         <div className={styles.fog} />
       </div>
       <div className={`wrap ${styles.inner}`}>
-        <SectionLabel>13 / Future maritime systems</SectionLabel>
+        <SectionLabel>Future maritime systems</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           From cleaner
           <br />

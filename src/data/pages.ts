@@ -1,0 +1,78 @@
+import { media, mediaAlts } from './media'
+
+export const homeFeatured = {
+  href: '/aqua-skimmer',
+  kicker: 'Flagship',
+  title: 'Aqua Skimmer',
+  copy: 'Unmanned surface vessel for floating-waste collection and water-quality monitoring. Remotely operated today. Fully autonomous version in development.',
+  cta: 'Explore Aqua Skimmer',
+  image: media.heroProduct,
+  alt: mediaAlts.heroProduct,
+  contain: true,
+}
+
+export const homeGateways = [
+  {
+    id: 'why',
+    href: '/why',
+    kicker: 'Why',
+    title: 'The problem is physical.',
+    copy: 'Waste, survey, monitoring. Machines for water — not another software layer.',
+    image: media.aquaCollection,
+    alt: mediaAlts.aquaCollection,
+  },
+  {
+    id: 'technology',
+    href: '/technology',
+    kicker: 'Technology',
+    title: 'One technology. Many missions.',
+    copy: 'Clean. Survey. Monitor. Secure. Built as a family of unmanned systems.',
+    image: media.aquaEngineering,
+    alt: mediaAlts.aquaEngineering,
+  },
+  {
+    id: 'platforms',
+    href: '/platforms',
+    kicker: 'Platforms',
+    title: 'Vessels for the work water asks for.',
+    copy: 'Aqua Skimmer on the water. AquaScanner in development. Sentinel-M as a concept.',
+    image: media.aquaSide,
+    alt: mediaAlts.aquaSide,
+  },
+  {
+    id: 'deployments',
+    href: '/deployments',
+    kicker: 'Deployments',
+    title: 'Proven on water.',
+    copy: 'Verified Aqua Skimmer pilots in Hyderabad, Secunderabad, Kolkata and Lucknow.',
+    image: media.aquaWorks,
+    alt: mediaAlts.aquaWorks,
+  },
+  {
+    id: 'survey',
+    href: '/survey',
+    kicker: 'Survey',
+    title: 'See beneath the surface.',
+    copy: 'Hydrographic surveying and waterway mapping. AquaScanner is in development.',
+    image: media.aquaDeployment,
+    alt: mediaAlts.aquaDeployment,
+  },
+  {
+    id: 'about',
+    href: '/about',
+    kicker: 'About',
+    title: 'Indian deep-tech. Founded 2021.',
+    copy: 'Marine robotics from Hyderabad — hardware, field work, and the people building it.',
+    image: media.aquaCollection,
+    alt: mediaAlts.aquaCollection,
+  },
+  {
+    id: 'notes',
+    href: '/blog',
+    kicker: 'Blog',
+    title: 'Notes from the water.',
+    copy: 'Editorial notes on marine robotics, water management, autonomy and survey.',
+    image: media.aquaWorks,
+    alt: mediaAlts.aquaWorks,
+  },
+] as const

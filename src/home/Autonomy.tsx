@@ -33,7 +33,7 @@ export function Autonomy() {
     <section ref={rootRef} className={styles.section} id="autonomy">
       <div className={styles.radar} aria-hidden="true" />
       <div className={`wrap ${styles.inner}`}>
-        <SectionLabel>11 / Autonomy</SectionLabel>
+        <SectionLabel>Autonomy</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           Today,
           <br />

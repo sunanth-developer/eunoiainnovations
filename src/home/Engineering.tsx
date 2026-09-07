@@ -35,7 +35,7 @@ export function Engineering() {
   return (
     <section ref={rootRef} className={styles.section} id="engineering">
       <div className={`wrap ${styles.head}`}>
-        <SectionLabel>08 / Engineering</SectionLabel>
+        <SectionLabel>Engineering</SectionLabel>
         <h2 className={`display ${styles.title}`}>
           Designed
           <br />

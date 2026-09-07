@@ -53,7 +53,7 @@ export function HowItWorks() {
   return (
     <section className={styles.section} id="how">
       <div className={`wrap ${styles.head}`}>
-        <SectionLabel>07 / How it works</SectionLabel>
+        <SectionLabel>How it works</SectionLabel>
         <h2 className={`display ${styles.title}`}>Deploy. Navigate. Collect. Monitor. Return.</h2>
       </div>
       <div ref={pinRef} className={styles.pin}>

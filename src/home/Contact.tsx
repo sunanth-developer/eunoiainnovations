@@ -26,7 +26,7 @@ export function Contact() {
     <section className={styles.section} id="contact">
       <div className={`wrap ${styles.grid}`}>
         <div>
-          <SectionLabel>18 / Contact</SectionLabel>
+          <SectionLabel>Contact</SectionLabel>
           <h2 className={`display ${styles.title}`}>
             Have a
             <br />
