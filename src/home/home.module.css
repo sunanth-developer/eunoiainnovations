@@ -186,7 +186,6 @@
 .capabilities,
 .aqua,
 .maintain,
-.process,
 .projects,
 .engage,
 .eco,
@@ -220,17 +219,31 @@
 
 .flow li {
   position: relative;
-  padding: 16px 0;
+  padding: 18px 0;
+}
+
+.flow strong {
+  display: block;
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  font-weight: 500;
   letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.flow p {
+  margin-top: 8px;
+  max-width: 36rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .flow li::before {
   content: '';
   position: absolute;
   left: -32px;
-  top: 28px;
+  top: 26px;
   width: 9px;
   height: 9px;
   border: 1px solid var(--aqua);
@@ -417,60 +430,11 @@
   align-items: center;
 }
 
-.process {
-  background: var(--offwhite);
-}
-
-.processLayout {
+.deployPin {
   display: grid;
-  grid-template-columns: 0.7fr 1.3fr;
-  gap: 56px;
-}
-
-.stepList button {
-  display: grid;
-  width: 100%;
-  gap: 6px;
-  padding: 18px 0;
-  text-align: left;
-  border-bottom: 1px solid var(--line);
-}
-
-.stepList strong {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  color: var(--aqua-deep);
-}
-
-.stepList h3 {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-}
-
-.stepOn h3 {
-  color: var(--aqua-deep);
-}
-
-.stepVisual {
-  min-height: 420px;
-  padding: 40px;
-  background: var(--marine);
-  color: #e8efed;
-  border-radius: var(--radius-lg);
-}
-
-.stepVisual span {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--aqua);
-}
-
-.stepVisual h3 {
-  font-size: clamp(2.6rem, 6vw, 5rem);
-  margin: 16px 0 20px;
+  gap: 24px;
+  min-height: 0;
+  margin-top: 28px;
 }
 
 .projects {
@@ -479,6 +443,7 @@
 
 .projectActions {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 24px;
 }
@@ -611,7 +576,7 @@
   .split,
   .aquaHead,
   .maintainSplit,
-  .processLayout,
+  .deployPin,
   .modes,
   .benefits,
   .specs,
@@ -631,7 +596,6 @@
   .capabilities,
   .aqua,
   .maintain,
-  .process,
   .projects,
   .engage,
   .eco,
@@ -660,13 +624,8 @@
     height: 42vh;
   }
 
-  .stepVisual {
+  .deployPin {
     min-height: 0;
-    padding: 28px;
-  }
-
-  .stepVisual h3 {
-    font-size: clamp(2rem, 12vw, 3.2rem);
   }
 
   .cap {
@@ -691,7 +650,7 @@
     display: none;
   }
 
-  .flow li {
+  .flow strong {
     font-size: 1.4rem;
   }
 

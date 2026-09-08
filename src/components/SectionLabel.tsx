@@ -3,6 +3,6 @@ type SectionLabelProps = {
   className?: string
 }
 
-export function SectionLabel({ children, className = '' }: SectionLabelProps) {
-  return <p className={`label ${className}`}>{children}</p>
+export function SectionLabel(_props: SectionLabelProps) {
+  return null
 }

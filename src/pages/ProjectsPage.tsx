@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { LinkButton } from '../components/Button'
 import { ProjectsMap } from '../components/ProjectsMap'
 import { Seo, breadcrumbSchema } from '../components/Seo'
 import { publicProjects } from '../data/projects'
 import { pageSeo } from '../data/site'
+import { useDeploymentsScroll } from '../hooks/useDeploymentsScroll'
 import { handleAppLink, withBase } from '../lib/router'
 import { PageHero } from './pageHero'
 import page from './page.module.css'
@@ -12,6 +13,8 @@ import styles from './site.module.css'
 export function ProjectsPage() {
   const featured = publicProjects.find((item) => item.featured) ?? publicProjects[0]
   const [selected, setSelected] = useState(featured)
+  const mapRef = useRef<HTMLDivElement>(null)
+  useDeploymentsScroll(mapRef, setSelected, 'projects-page-pin')
 
   return (
     <div className={page.page}>
@@ -38,7 +41,7 @@ export function ProjectsPage() {
         lede="Explore how Eunoia has deployed Aqua Skimmer and related services across lakes, rivers and waterfront environments."
       />
       <section className={styles.section}>
-        <div className="wrap">
+        <div className="wrap" ref={mapRef}>
           <ProjectsMap selectedId={selected.id} onSelect={setSelected} />
           <div className={styles.drawer}>
             <p className={styles.kicker}>

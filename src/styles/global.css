@@ -15,9 +15,12 @@ body,
   max-width: 100%;
 }
 
-html,
+html {
+  scrollbar-width: none;
+}
+
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   scrollbar-width: none;
 }
 

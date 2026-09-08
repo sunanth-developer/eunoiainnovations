@@ -1,5 +1,4 @@
 import { useEffect, type ReactNode } from 'react'
-import { SectionLabel } from '../components/SectionLabel'
 import styles from './page.module.css'
 
 export function usePageTitle(title: string) {
@@ -13,16 +12,15 @@ export function usePageTitle(title: string) {
 }
 
 type PageHeroProps = {
-  kicker: string
+  kicker?: string
   title: ReactNode
   lede?: string
 }
 
-export function PageHero({ kicker, title, lede }: PageHeroProps) {
+export function PageHero({ title, lede }: PageHeroProps) {
   return (
     <header className={styles.hero}>
       <div className="wrap">
-        <SectionLabel>{kicker}</SectionLabel>
         <h1 className={`display ${styles.title}`}>{title}</h1>
         {lede ? <p className="lede">{lede}</p> : null}
       </div>

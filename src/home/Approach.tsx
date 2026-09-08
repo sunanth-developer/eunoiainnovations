@@ -1,8 +1,7 @@
 import { LinkButton } from '../components/Button'
 import { SectionLabel } from '../components/SectionLabel'
+import { processSteps } from '../data/solutions'
 import styles from './home.module.css'
-
-const steps = ['Assess', 'Deploy', 'Operate', 'Maintain', 'Measure', 'Handover']
 
 export function Approach() {
   return (
@@ -29,8 +28,11 @@ export function Approach() {
           </div>
         </div>
         <ol className={styles.flow}>
-          {steps.map((step) => (
-            <li key={step}>{step}</li>
+          {processSteps.map((step) => (
+            <li key={step.id}>
+              <strong>{step.title}</strong>
+              <p>{step.copy}</p>
+            </li>
           ))}
         </ol>
       </div>

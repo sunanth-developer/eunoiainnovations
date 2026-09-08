@@ -37,16 +37,6 @@ export const services = [
   },
 ] as const
 
-export const serviceProcess = [
-  'Consult',
-  'Assess',
-  'Design',
-  'Mobilise',
-  'Operate',
-  'Review',
-  'Handover',
-] as const
-
 export const engagementModels = [
   {
     id: 'managed',

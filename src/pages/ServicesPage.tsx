@@ -1,6 +1,6 @@
 import { LinkButton } from '../components/Button'
 import { Seo, breadcrumbSchema } from '../components/Seo'
-import { faqs, serviceProcess, services } from '../data/services'
+import { faqs, services } from '../data/services'
 import { pageSeo } from '../data/site'
 import { PageHero } from './pageHero'
 import page from './page.module.css'
@@ -40,19 +40,6 @@ export function ServicesPage() {
         }
         lede="A practical operating sequence for governments, corporations and institutions that need continuity, not a one-day clean-up."
       />
-      <section className={styles.section}>
-        <div className="wrap">
-          <p className={styles.kicker}>Process</p>
-          <div className={styles.chips} style={{ marginTop: 24 }}>
-            {serviceProcess.map((item, index) => (
-              <span key={item} className={styles.kicker}>
-                {item}
-                {index < serviceProcess.length - 1 ? ' →' : ''}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
       <section className={styles.section}>
         <div className={`wrap ${styles.cards}`}>
           {services.map((item) => (

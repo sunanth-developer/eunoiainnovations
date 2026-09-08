@@ -7,7 +7,6 @@ import { Ecosystem } from '../home/Ecosystem'
 import { EngagementPreview } from '../home/EngagementPreview'
 import { Finale } from '../home/Finale'
 import { Hero } from '../home/Hero'
-import { HowWeWork } from '../home/HowWeWork'
 import { Maintenance } from '../home/Maintenance'
 import { Problem } from '../home/Problem'
 import { SelectedDeployments } from '../home/SelectedDeployments'
@@ -44,7 +43,6 @@ export function Home() {
       <Capabilities />
       <AquaStory />
       <Maintenance />
-      <HowWeWork />
       <SelectedDeployments />
       <EngagementPreview />
       <Ecosystem />
