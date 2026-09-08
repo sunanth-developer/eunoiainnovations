@@ -1,9 +1,29 @@
 .section {
   padding: 88px 0;
+  scroll-margin-top: calc(var(--nav-h) + 12px);
 }
 
 .section + .section {
   border-top: 1px solid var(--line);
+}
+
+.portrait {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-sm);
+  background: var(--offwhite);
+  border: 1px dashed var(--line-strong);
+  object-fit: cover;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--aqua-deep);
+}
+
+.partnerNames {
+  margin-top: 36px;
 }
 
 .grid2,
@@ -38,6 +58,39 @@
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.4vw, 2.1rem);
   letter-spacing: -0.03em;
+}
+
+.teamHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.teamHead h3 {
+  margin: 0;
+}
+
+.linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  margin: -8px -8px 0 0;
+  color: var(--ink);
+  border-radius: 8px;
+}
+
+.linkedin svg {
+  width: 20px;
+  height: 20px;
+}
+
+a.linkedin:hover,
+a.linkedin:focus-visible {
+  color: var(--aqua-deep);
 }
 
 .kicker {
