@@ -1,14 +1,14 @@
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: 56px;
+  gap: 48px 64px;
   align-items: start;
 }
 
 .mapPanel {
-  padding: 24px;
-  background: var(--marine);
-  border-radius: var(--radius-lg);
+  padding: 20px 20px 16px;
+  background: #0b2427;
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .map {
@@ -56,7 +56,7 @@
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--struct);
+  color: #7f9391;
 }
 
 .kicker {
@@ -67,9 +67,13 @@
   color: var(--accent);
 }
 
+.panel {
+  animation: panelIn 0.45s var(--ease);
+}
+
 .place {
   margin: 16px 0 20px;
-  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
 }
 
 .place span {
@@ -109,6 +113,7 @@
   display: flex;
   justify-content: space-between;
   gap: 16px;
+  min-height: 48px;
   padding: 14px 0;
   border-bottom: 1px solid var(--line);
   text-align: left;
@@ -124,35 +129,70 @@
 }
 
 .active {
-  color: var(--white);
+  color: var(--ink);
+}
+
+.dark .place {
+  color: #fff;
+}
+
+.dark .note,
+.dark .list button {
+  color: #9aafad;
+}
+
+.dark .active {
+  color: #fff;
+}
+
+.dark .kicker {
+  color: var(--aqua);
 }
 
 @keyframes ring {
   70% {
     opacity: 0;
-    transform: scale(2.6);
+    transform: scale(2.4);
+  }
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
 @media (max-width: 860px) {
   .layout {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 24px;
   }
 
   .mapPanel {
-    padding: 16px;
+    padding: 14px;
+  }
+
+  .place {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 
   .list button {
     align-items: flex-start;
     flex-direction: column;
+    justify-content: center;
     gap: 4px;
+    min-height: 52px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pulse {
+  .pulse,
+  .panel {
     animation: none;
   }
 }

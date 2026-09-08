@@ -1,20 +1,19 @@
 import problemImage from '../assets/images-4.jpeg'
-import { SectionLabel } from '../components/SectionLabel'
 import styles from './home.module.css'
 
 export function Problem() {
   return (
     <section className={styles.problem} id="problem">
-      <img src={problemImage} alt="Aqua Skimmer collecting vegetation from a water body" />
+      <img src={problemImage} alt="Aqua Skimmer collecting vegetation from a water body" loading="lazy" />
       <div className={`wrap ${styles.problemInner}`}>
-        <SectionLabel>The problem</SectionLabel>
         <h2 className="display">
-          One-time clean-ups
+          One-time cleaning
           <br />
-          do not keep
-          <br />
-          water bodies clean.
+          is not a system.
         </h2>
+        <p className={styles.problemLead}>
+          Cleaner water bodies require continuous operations, not one-time clean-ups.
+        </p>
         <p>
           Floating waste, weeds and pollution return when inflow points remain active and
           routine maintenance is absent.

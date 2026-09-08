@@ -4,15 +4,17 @@ import styles from './IndiaMap.module.css'
 type ProjectsMapProps = {
   selectedId?: string
   onSelect?: (project: Project) => void
+  tone?: 'light' | 'dark'
 }
 
-export function ProjectsMap({ selectedId, onSelect }: ProjectsMapProps) {
+export function ProjectsMap({ selectedId, onSelect, tone = 'light' }: ProjectsMapProps) {
   const current = publicProjects.find((item) => item.id === selectedId) ?? publicProjects[0]
+  const index = String(publicProjects.findIndex((item) => item.id === current.id) + 1).padStart(2, '0')
 
   const select = (project: Project) => onSelect?.(project)
 
   return (
-    <div className={styles.layout}>
+    <div className={`${styles.layout} ${tone === 'dark' ? styles.dark : ''}`}>
       <div className={styles.mapPanel}>
         <svg
           viewBox="0 0 100 110"
@@ -54,9 +56,9 @@ export function ProjectsMap({ selectedId, onSelect }: ProjectsMapProps) {
         <p className={styles.disclaimer}>Schematic locations. Not geographic precision.</p>
       </div>
 
-      <div className={styles.panel}>
+      <div className={styles.panel} key={current.id}>
         <p className={styles.kicker}>
-          {current.date ?? 'Field deployment'} / {current.type}
+          Project {index} / {current.date ?? 'Field deployment'} / {current.type}
         </p>
         <h3 className={`display ${styles.place}`}>
           {current.city}

@@ -21,7 +21,7 @@ export const navItems: NavItem[] = [
   },
   { label: 'Services', href: '/services', match: ['/services'] },
   { label: 'Projects', href: '/projects', match: ['/projects', '/deployments'] },
-  { label: 'Engagement Models', href: '/engagement-models', match: ['/engagement-models'] },
+  { label: 'Engagement', href: '/engagement-models', match: ['/engagement-models'] },
   { label: 'Insights', href: '/insights', match: ['/insights', '/blog', '/notes'] },
 ]
 

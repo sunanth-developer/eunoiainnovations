@@ -1,5 +1,4 @@
 import { LinkButton } from '../components/Button'
-import { SectionLabel } from '../components/SectionLabel'
 import { contactDetails } from '../data/site'
 import styles from './home.module.css'
 
@@ -7,7 +6,6 @@ export function Finale() {
   return (
     <section className={styles.finale} id="start">
       <div className="wrap">
-        <SectionLabel>Start a project</SectionLabel>
         <h2 className="display">
           Let’s discuss
           <br />
@@ -19,13 +17,18 @@ export function Finale() {
           equipment purchase or survey.
         </p>
         <div className={styles.actions}>
-          <LinkButton href="/contact">Submit project details</LinkButton>
-          {contactDetails.brochureUrl ? (
-            <LinkButton href={contactDetails.brochureUrl} variant="ghost">
+          <LinkButton href="/contact">Request a site demo</LinkButton>
+          <a className={styles.finaleMail} href={contactDetails.emailHref}>
+            {contactDetails.email}
+          </a>
+        </div>
+        {contactDetails.brochureUrl ? (
+          <div className={styles.actions}>
+            <LinkButton href={contactDetails.brochureUrl} variant="ghost" className={styles.ghostLight}>
               Download brochure
             </LinkButton>
-          ) : null}
-        </div>
+          </div>
+        ) : null}
       </div>
     </section>
   )

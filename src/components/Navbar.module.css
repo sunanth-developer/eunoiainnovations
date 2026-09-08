@@ -26,9 +26,8 @@
 
 .compact {
   height: var(--nav-h-compact);
-  background: var(--panel);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 10px 30px rgba(7, 23, 25, 0.06);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
 }
 
 .compact .shell,
@@ -63,10 +62,10 @@
 .link {
   position: relative;
   display: block;
-  padding: 10px 11px;
+  padding: 10px 12px;
   font-family: var(--font-body);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.01em;
   color: var(--ink);
 }
@@ -112,12 +111,10 @@
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 240px;
-  padding: 12px 0;
+  min-width: 260px;
+  padding: 10px 0;
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: 0 16px 40px rgba(7, 23, 25, 0.08);
 }
 
 .drop a {
@@ -178,8 +175,8 @@
 
 .burger {
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   position: relative;
 }
 
@@ -193,20 +190,20 @@
 }
 
 .burger i:first-of-type {
-  top: 16px;
+  top: 18px;
 }
 
 .burger i:last-of-type {
-  top: 24px;
+  top: 26px;
 }
 
 .open .burger i:first-of-type {
-  top: 20px;
+  top: 22px;
   transform: rotate(45deg);
 }
 
 .open .burger i:last-of-type {
-  top: 20px;
+  top: 22px;
   transform: rotate(-45deg);
 }
 
@@ -254,8 +251,8 @@
   }
 
   .cta {
-    min-height: 40px;
-    padding: 0 12px;
+    min-height: 44px;
+    padding: 0 14px;
   }
 
   .mobile {
@@ -266,6 +263,7 @@
     overflow-y: auto;
     z-index: 1;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 
   .open .mobile {
@@ -281,21 +279,23 @@
   .mobile a {
     display: block;
     font-family: var(--font-display);
-    font-size: clamp(1.5rem, 7vw, 2rem);
+    font-size: clamp(1.4rem, 6.4vw, 1.9rem);
     letter-spacing: -0.03em;
-    line-height: 1.15;
+    line-height: 1.2;
+    min-height: 48px;
     padding: 12px 0;
     border-bottom: 1px solid var(--line);
   }
 
   .sub {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
     letter-spacing: 0.08em !important;
     text-transform: uppercase;
     font-family: var(--font-mono) !important;
     color: var(--muted);
     border: 0 !important;
-    padding: 6px 0 !important;
+    min-height: 40px !important;
+    padding: 8px 0 !important;
   }
 
   .mobileCta {

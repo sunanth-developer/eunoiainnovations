@@ -52,6 +52,7 @@
   .title {
     max-width: none;
     font-size: clamp(1.7rem, 8vw, 2.4rem);
+    line-height: 1.1;
   }
 
   .mid {
@@ -60,5 +61,14 @@
 
   .page {
     padding-bottom: 48px;
+  }
+
+  .close {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .close a {
+    width: 100%;
   }
 }

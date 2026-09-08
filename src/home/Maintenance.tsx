@@ -1,24 +1,27 @@
 import { CompareSlider } from '../components/CompareSlider'
 import { LinkButton } from '../components/Button'
-import { SectionLabel } from '../components/SectionLabel'
 import { imageAlts, imageConfig } from '../config/imageConfig'
 import styles from './home.module.css'
 
 export function Maintenance() {
   return (
     <section className={styles.maintain} id="maintenance">
-      <div className={`wrap ${styles.maintainSplit}`}>
-        <div>
-          <SectionLabel>Maintenance matters</SectionLabel>
+      <div className="wrap">
+        <div className={styles.maintainHead}>
           <h2 className={`display ${styles.title}`}>
-            The real outcome
-            <br />
-            is not a clean-up day.
-            <br />
-            It is a water body
-            <br />
-            that stays maintained.
+            The real outcome is not a clean-up day.
+            It is a water body that stays maintained.
           </h2>
+        </div>
+        <CompareSlider
+          before={imageConfig.aqua.waste}
+          after={imageConfig.aqua.impact}
+          beforeAlt={imageAlts.waste}
+          afterAlt={imageAlts.impact}
+          beforeLabel="Before / surface condition"
+          afterLabel="After / maintained condition"
+        />
+        <div className={styles.maintainCopy}>
           <p className="lede">
             Eunoia supports scheduled operations, operator deployment, equipment upkeep,
             waste documentation, monitoring and monthly impact reporting.
@@ -31,14 +34,6 @@ export function Maintenance() {
             <LinkButton href="/services">Explore maintenance programmes</LinkButton>
           </div>
         </div>
-        <CompareSlider
-          before={imageConfig.aqua.waste}
-          after={imageConfig.aqua.impact}
-          beforeAlt={imageAlts.waste}
-          afterAlt={imageAlts.impact}
-          beforeLabel="Surface conditions"
-          afterLabel="Routine operations"
-        />
       </div>
     </section>
   )

@@ -252,9 +252,16 @@
     padding: 20px;
   }
 
+  .reach a,
+  .card {
+    min-height: 44px;
+  }
+
   .form input,
   .form select,
-  .form textarea {
+  .form textarea,
+  .form button {
+    width: 100%;
     font-size: 16px;
   }
 }

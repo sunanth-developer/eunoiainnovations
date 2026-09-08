@@ -14,7 +14,6 @@
   display: inline-flex;
   background: #fff;
   padding: 8px 10px;
-  border-radius: var(--radius);
 }
 
 .plate img {
@@ -91,13 +90,21 @@
 
 @media (max-width: 700px) {
   .footer {
-    padding: 56px 0 24px;
+    padding: 56px 0 calc(24px + env(safe-area-inset-bottom, 0px));
   }
 
   .top,
   .base {
     grid-template-columns: 1fr;
     flex-direction: column;
+  }
+
+  .top nav a,
+  .contact a,
+  .base a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .plate img {

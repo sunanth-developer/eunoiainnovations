@@ -10,7 +10,6 @@ import { Hero } from '../home/Hero'
 import { Maintenance } from '../home/Maintenance'
 import { Problem } from '../home/Problem'
 import { SelectedDeployments } from '../home/SelectedDeployments'
-import { Trust } from '../home/Trust'
 import { useHomeMotion } from '../home/useHomeMotion'
 import { useScrollRefresh } from '../hooks/useScrollRefresh'
 
@@ -37,7 +36,6 @@ export function Home() {
         ]}
       />
       <Hero />
-      <Trust />
       <Problem />
       <Approach />
       <Capabilities />
